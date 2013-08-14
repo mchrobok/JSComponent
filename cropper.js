@@ -34,6 +34,6 @@ function ImageCropper() {
 };
 
 loadImage = function (src, callback) {
-  this.imageLoadedCallback = callback;
+  imageCropper.imageLoadedCallback = callback;
   imageCropper.reload(src);
 };
