@@ -1,8 +1,17 @@
-var imageCropper = new ImageCropper ();
+var imageCropper;
+
+$(document).ready(function () {
+  imageCropper = new ImageCropper();
+});
 
 function ImageCropper() {
 
   var cropper;
+  this.imageLoadedCallback;
+
+  this.imageLoaded = function () {
+    this.imageLoadedCallback();
+  };
 
   this.aspectRatioChanged = function (combobox) {
     $('#image').Jcrop({
@@ -16,16 +25,15 @@ function ImageCropper() {
   };
 
   this.reload = function (src) {
-    $('#image').attr('src', src);
-    $('#image').Jcrop({
-      aspectRatio: 4/3
-    }, function () {
-      cropper = this;
-    });
+    cropper.setImage(src);
   };
+
+  $('#image').Jcrop({ aspectRatio: 4 / 3 }, function () {
+    cropper = this;
+  });
 };
 
-loadImage = function (src, imageLoadedCallback) {
+loadImage = function (src, callback) {
+  this.imageLoadedCallback = callback;
   imageCropper.reload(src);
-  imageLoadedCallback();
 };

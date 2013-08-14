@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="bower_components/jcrop/css/jquery.Jcrop.css" type="text/css"/>
 </head>
 <body>
-    <img id="image"/>
-    <select onchange="imageCropper.aspectRatioChanged(this)">
-        <option value="1.33333">4:3</option>
-        <option value="1.77778">16:9</option>
-        <option value="1">1:1</option>
-    </select>
-    <button onclick="imageCropper.crop()">Crop</button>
-    <label id="height"></label>
-    <label id="width"></label>
+<img id="image" onload="imageCropper.imageLoaded()"/>
+<select onchange="imageCropper.aspectRatioChanged(this)">
+    <option value="1.33333">4:3</option>
+    <option value="1.77778">16:9</option>
+    <option value="1">1:1</option>
+</select>
+<button onclick="imageCropper.crop()">Crop</button>
+<label id="height"></label>
+<label id="width"></label>
 </body>
 </html>
