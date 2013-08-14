@@ -1,15 +1,16 @@
 <html>
 <head>
-    <script src="../jcrop/js/jquery.min.js"></script>
-    <script src="../jcrop/js/jquery.Jcrop.min.js"></script>
+    <script src="bower_components/jcrop/js/jquery.min.js"></script>
+    <script src="bower_components/jcrop/js/jquery.Jcrop.min.js"></script>
     <script src="cropper.js"></script>
-    <link rel="stylesheet" href="../jcrop/css/jquery.Jcrop.css" type="text/css"/>
+
+    <link rel="stylesheet" href="bower_components/jcrop/css/jquery.Jcrop.css" type="text/css"/>
 </head>
 <body>
     <img id="image"/>
     <select onchange="imageCropper.aspectRatioChanged(this)">
-        <option value="1.333">4:3</option>
-        <option value="1.778">16:9</option>
+        <option value="1.33333">4:3</option>
+        <option value="1.77778">16:9</option>
         <option value="1">1:1</option>
     </select>
     <button onclick="imageCropper.crop()">Crop</button>
