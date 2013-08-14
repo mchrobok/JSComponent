@@ -1,15 +1,7 @@
 {
   "name": "ImageCropper",
-  "version": "0.1.0",
-  "main": "cropper.js",
+  "version": "0.2.0",
   "dependencies": {
     "jcrop": "latest"
-  },
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+  }
 }
